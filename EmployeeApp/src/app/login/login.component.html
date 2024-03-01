@@ -1,0 +1,34 @@
+<p class="text-center">Login</p>
+<div class="container w-25">
+
+    <form (ngSubmit)="login(f)" #f="ngForm">
+        <div class="form-group">
+            <div>Email</div>
+            <input class="form-control" name="email" ngModel 
+                    required
+                    type="email"
+                    email
+                    #emailField="ngModel">
+            <div class="text-danger" *ngIf="emailField.errors && emailField.touched">
+                <p *ngIf="emailField.errors?.['email']">Invalid email!</p>
+            </div>
+        </div>
+        <div class="form-group">
+            <div>Password</div>
+            <input class="form-control" type="password" name="password" ngModel  
+                    required 
+                    #passwordField="ngModel"  
+                    minlength="4" 
+                    maxlength="20">
+            <div class="text-danger" *ngIf="passwordField.errors && passwordField.touched">
+                <p *ngIf="passwordField.errors?.['minlength']">Password too short! Must be between 4 and 20 characters</p>
+                <p *ngIf="passwordField.errors?.['maxlength']">Password too long! Must be between 4 and 20 characters</p>
+            </div>
+        </div>
+    
+        <div class="form-group m-3">
+            <button class="form-control btn btn-primary" [disabled]="passwordField.errors || emailField.errors" type="submit">Login</button>
+        </div>
+    </form>
+
+</div>

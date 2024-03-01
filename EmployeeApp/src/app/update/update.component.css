@@ -1,0 +1,26 @@
+.employee-modal{
+    position:fixed;
+    left:0;
+    top:0;
+    z-index: 1;
+    width:100%;
+    height:100%;
+    background-color: rgba(0,25,25,.5);
+}
+
+.employee-modal-content{
+    margin:10% auto;
+    background-color: lightgray;
+    padding: 1rem;
+    width: 35%;
+}
+
+input:invalid {
+    border: 2px solid red;
+    background-color: lightpink;
+}
+
+input:invalid + div:before {
+    content: "Required Field";
+    color: red;
+}

@@ -1,0 +1,39 @@
+<p class="text-center">Register</p>
+<div class="container employee-modal">
+    <div class = "employee-modal-content">
+        <div class="form-group">
+            <div>ID</div>
+            <input class="form-control" [(ngModel)]="dataService.employee.employeeId" required min ="1">
+        </div>
+        <div class="form-group">
+            <div>First Name</div>
+            <input class="form-control" [(ngModel)]="dataService.employee.firstName" required min="1">
+        </div>
+        <div class="form-group">
+            <div>Last Name</div>
+            <input class="form-control" [(ngModel)]="dataService.employee.lastName" required min ="1">
+        </div>
+        <div class="form-group">
+            <div>Email</div>
+            <input class="form-control" type="email" [(ngModel)]="dataService.employee.email" required min ="4">
+        </div>
+        <div class="form-group">
+            <div>Password</div>
+            <input class="form-control" type="password" [(ngModel)]="dataService.employee.password" required min ="4">
+        </div>
+        <div class="form-group">
+            <div>Salary</div>
+            <input class="form-control" [(ngModel)]="dataService.employee.salary" required min ="1">
+        </div>
+        <div class="form-group">
+            <div>Department</div>
+            <input class="form-control" [(ngModel)]="dataService.employee.department" required min ="1">
+        </div>
+        <div class="form-group m-2">
+            <button class="form-control btn btn-primary" (click)="update()">Update</button>
+        </div>
+        <div class="form-group m-2">
+            <button class="form-control btn btn-danger" (click)="cancel()">Cancel</button>
+        </div>
+    </div>
+</div>

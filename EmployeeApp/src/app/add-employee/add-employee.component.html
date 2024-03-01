@@ -1,0 +1,33 @@
+<div class="container employee-modal">
+    
+    <div class = "employee-modal-content">
+        <h4 class="text-center">Add Employee</h4>
+        <p>*Fields in red are required</p>
+        <div class="form-group">
+            <div>ID*</div>
+            <input class="form-control" [(ngModel)]="dataService.employee.employeeId" required minlength ="1">
+        </div>
+        <div class="form-group">
+            <div>First Name*</div>
+            <input class="form-control" [(ngModel)]="dataService.employee.firstName" required minlength ="1">
+        </div>
+        <div class="form-group">
+            <div>Last Name*</div>
+            <input class="form-control" [(ngModel)]="dataService.employee.lastName" required minlength ="1">
+        </div>
+        <div class="form-group">
+            <div>Salary</div>
+            <input class="form-control" [(ngModel)]="dataService.employee.salary" >
+        </div>
+        <div class="form-group">
+            <div>Department</div>
+            <input class="form-control" [(ngModel)]="dataService.employee.department">
+        </div>
+        <div class="form-group m-2">
+            <button class="form-control btn btn-primary" (click)="add()">Add</button>
+        </div>
+        <div class="form-group m-2">
+            <button class="form-control btn btn-danger" (click)="cancel()">Cancel</button>
+        </div>
+    </div>
+</div>

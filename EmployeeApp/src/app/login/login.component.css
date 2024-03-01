@@ -1,0 +1,13 @@
+input:invalid {
+    border: 2px solid red;
+    background-color: lightpink;
+}
+
+input:invalid + div:before {
+    content: "Required Field";
+    color: red;
+}
+
+button:disabled {
+    background-color: lightgray;
+}

@@ -1,0 +1,37 @@
+<p class="text-center">Register</p>
+<div class="container employee-modal">
+    <div class="employee-modal-content">
+        <div class="form-group">
+            <div>ID</div>
+            <input class="form-control" [(ngModel)]="dataService.employee.employeeId" readonly>
+        </div>
+        <div class="form-group">
+            <div>First Name</div>
+            <input class="form-control" [(ngModel)]="dataService.employee.firstName" readonly>
+        </div>
+        <div class="form-group">
+            <div>Last Name</div>
+            <input class="form-control" [(ngModel)]="dataService.employee.lastName" readonly>
+        </div>
+        <div class="form-group">
+            <div>Email</div>
+            <input class="form-control" type="email" [(ngModel)]="dataService.employee.email" readonly>
+        </div>
+        <div class="form-group">
+            <div>Password <button class="btn btn-sm text-info float-end" (click)="togglePassword()">Show/Hide</button></div>
+            <input id ="password" class="form-control" [type]="showPassword"  [(ngModel)]="dataService.employee.password" readonly>
+            
+        </div>
+        <div class="form-group">
+            <div>Salary</div>
+            <input class="form-control" [ngModel]="dataService.employee.salary | currencyDisplay" (ngModelChange)="dataService.employee.salary=$event" readonly>
+        </div>
+        <div class="form-group">
+            <div>Department</div>
+            <input class="form-control" [(ngModel)]="dataService.employee.department" readonly>
+        </div>
+        <div class="form-group m-2">
+            <button class="form-control btn btn-primary" (click)="cancel()">Back</button>
+        </div>
+    </div>
+</div>
